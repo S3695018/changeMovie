@@ -10,26 +10,38 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var changeButton: UIButton!
+    @IBOutlet weak var movieName: UILabel!
     @IBOutlet weak var moviePoster: UIImageView!
-    @IBOutlet weak var movieChange: UISegmentedControl!
+    //connection to the modal
+    
+    var movie = Movie.movie1
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        movieName.text = movie.detail.title
+        moviePoster.image = UIImage(named: movie.detail.moviePoster)
     }
-
-    @IBAction func changeMovieFunction(_ sender: Any)
+    @IBAction func changeMovie(_ sender: Any)
     {
-        switch movieChange.selectedSegmentIndex
+        if(movie == Movie.movie1)
         {
-        case 0:
-            moviePoster.image = UIImage(named: "Avengers")
-        case 1:
-            moviePoster.image = UIImage(named: "TearsOfSteel")
-        default:
-            break
+            movie = Movie.movie2
+            updateMovieDetails()
+        }
+        else
+        {
+            movie = Movie.movie1
+            updateMovieDetails()
         }
     }
     
+    func updateMovieDetails()
+    {
+        movieName.text = movie.detail.title
+        moviePoster.image = UIImage(named: movie.detail.moviePoster)
+    }
 }
 

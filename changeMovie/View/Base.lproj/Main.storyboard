@@ -18,35 +18,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nOc-x2-Axh">
-                                <rect key="frame" x="76" y="521" width="168" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="Avengers"/>
-                                    <segment title="TeerOf Steel"/>
-                                </segments>
-                                <connections>
-                                    <action selector="changeMovieFunction:" destination="BYZ-38-t0r" eventType="valueChanged" id="loa-Sx-WUG"/>
-                                    <action selector="movieChangeFunction:" destination="BYZ-38-t0r" eventType="valueChanged" id="b1W-zw-pxw"/>
-                                </connections>
-                            </segmentedControl>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Avengers" translatesAutoresizingMaskIntoConstraints="NO" id="AKI-gf-pQI">
                                 <rect key="frame" x="40" y="140" width="240" height="323"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TiV-9T-bcj">
-                                <rect key="frame" x="40" y="99" width="64" height="33"/>
+                                <rect key="frame" x="40" y="104" width="240" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" red="1" green="0.36732209081905864" blue="0.41345131929770584" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwp-sg-LJt">
+                                <rect key="frame" x="134" y="495" width="53" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Change"/>
+                                <connections>
+                                    <action selector="changeMovie:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FES-IF-qXp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="movieChange" destination="nOc-x2-Axh" id="e8r-y7-Idw"/>
+                        <outlet property="changeButton" destination="bwp-sg-LJt" id="0ad-0e-9nI"/>
+                        <outlet property="movieName" destination="TiV-9T-bcj" id="P6U-eU-k4d"/>
                         <outlet property="moviePoster" destination="AKI-gf-pQI" id="8L6-42-0c9"/>
                     </connections>
                 </viewController>
