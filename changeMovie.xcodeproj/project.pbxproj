@@ -97,9 +97,10 @@
 		CE16635B2312B165008BC086 /* changeMovie */ = {
 			isa = PBXGroup;
 			children = (
+				CE16638C2312B1AA008BC086 /* Controller */,
+				CE16638A2312B180008BC086 /* View */,
+				CE16638B2312B186008BC086 /* Modal */,
 				CE16635C2312B165008BC086 /* AppDelegate.swift */,
-				CE16635E2312B165008BC086 /* ViewController.swift */,
-				CE1663602312B165008BC086 /* Main.storyboard */,
 				CE1663632312B165008BC086 /* Assets.xcassets */,
 				CE1663652312B165008BC086 /* LaunchScreen.storyboard */,
 				CE1663682312B165008BC086 /* Info.plist */,
@@ -123,6 +124,29 @@
 				CE16637E2312B166008BC086 /* Info.plist */,
 			);
 			path = changeMovieUITests;
+			sourceTree = "<group>";
+		};
+		CE16638A2312B180008BC086 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE1663602312B165008BC086 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE16638B2312B186008BC086 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		CE16638C2312B1AA008BC086 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE16635E2312B165008BC086 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
